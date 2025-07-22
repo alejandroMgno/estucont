@@ -14,7 +14,6 @@ function PageInicio({ setCurrentPage }) {
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Puedes agregar más meta tags según necesidad */}
       </Helmet>
 
       <section
@@ -31,7 +30,19 @@ function PageInicio({ setCurrentPage }) {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             Transformamos tus espacios con{' '}
-            <span className="text-lime-500">calidad y estilo</span>
+            <motion.span
+              className="text-lime-500 text-[#41921c] inline-block"
+              animate={{
+                y: [0, -8, 0], // sube, baja
+              }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            >
+              calidad y estilo
+            </motion.span>
           </motion.h1>
 
           {/* Párrafo animado */}

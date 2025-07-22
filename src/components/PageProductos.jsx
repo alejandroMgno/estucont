@@ -79,7 +79,14 @@ function PageProductos({ setCurrentPage }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Nuestros <span className="text-lime-500">Productos</span>
+          Nuestros{" "}
+          <motion.span
+            className="text-lime-500 inline-block"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+          >
+            Productos
+          </motion.span>
         </motion.h2>
 
         {/* Grid de productos */}
@@ -90,7 +97,11 @@ function PageProductos({ setCurrentPage }) {
               className="bg-gray-100 rounded-xl shadow-lg overflow-hidden hover:shadow-xl"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.5,
+                ease: "easeOut",
+              }}
               whileHover={{ scale: 1.03 }}
             >
               <img

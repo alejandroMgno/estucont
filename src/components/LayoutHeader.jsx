@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function LayoutHeader({ setCurrentPage }) {
+function LayoutHeader({ setCurrentPage, currentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -23,7 +23,7 @@ function LayoutHeader({ setCurrentPage }) {
       <div className="container mx-auto flex justify-between items-center h-full px-4">
         {/* Logo */}
         <motion.img
-          src="/estucont.jpg"
+          src="/ESTUCONT.png"
           alt="Estucont Logo"
           className="h-[90px] object-contain"
           whileHover={{ scale: 1.05 }}
@@ -32,13 +32,17 @@ function LayoutHeader({ setCurrentPage }) {
 
         {/* Menú escritorio */}
         <nav className="hidden md:flex gap-6">
-          {navLinks.map((page, index) => (
+          {navLinks.map((page) => (
             <motion.button
               key={page}
               onClick={() => handleNavigation(page)}
-              whileHover={{ scale: 1.1, color: "#84cc16" }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="text-black text-lg font-medium"
+              className={`text-lg font-medium transition-colors ${
+                currentPage === page
+                  ? "text-lime-600 underline underline-offset-4"
+                  : "text-black hover:text-lime-500"
+              }`}
             >
               {page.charAt(0).toUpperCase() + page.slice(1)}
             </motion.button>
@@ -87,14 +91,14 @@ function LayoutHeader({ setCurrentPage }) {
           >
             <ul className="flex flex-col items-center space-y-4">
               {navLinks.map((page) => (
-                <motion.li
-                  key={page}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full text-center"
-                >
+                <motion.li key={page} whileTap={{ scale: 0.95 }}>
                   <button
                     onClick={() => handleNavigation(page)}
-                    className="text-black hover:text-lime-500 transition-colors text-lg py-2 w-full"
+                    className={`text-lg py-2 w-full text-center transition-colors ${
+                      currentPage === page
+                        ? "text-lime-600 font-semibold"
+                        : "text-black hover:text-lime-500"
+                    }`}
                   >
                     {page.charAt(0).toUpperCase() + page.slice(1)}
                   </button>

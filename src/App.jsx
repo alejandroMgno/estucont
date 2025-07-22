@@ -11,6 +11,8 @@ import EstucoFibratado3000 from "./components/productos/EF3";
 import PegaAzulejoBlanco from "./components/productos/PAB";
 import Resina from "./components/productos/Resina";
 import BOQUILLA from "./components/productos/BQA";
+import WhatsappButton from "./components/WhatsappButton";
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState("inicio");
@@ -61,6 +63,8 @@ function App() {
           </p>
         </div>
       </footer>
+      {/* Botón flotante de WhatsApp */}
+      <WhatsappButton />
     </div>
   );
 }

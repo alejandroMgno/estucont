@@ -37,7 +37,13 @@ function PageContacto() {
       <section className="bg-black text-white min-h-screen py-16 px-4 sm:py-20 flex items-center justify-center">
         <div className="container mx-auto max-w-full px-4 sm:max-w-3xl">
           <h1 className="text-3xl font-bold mb-8 text-lime-400 text-center sm:text-4xl">
-            ¡Contáctanos!
+            <motion.span
+              className="inline-block"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+            >
+              ¡Contáctanos!
+            </motion.span>
           </h1>
           <p className="text-base mb-6 text-center sm:text-lg">
             ¿Tienes un proyecto en mente o necesitas una cotización? Estamos listos para ayudarte.
@@ -101,7 +107,7 @@ function PageContacto() {
                     id="email"
                     required
                     className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-lime-500 text-sm sm:px-4 sm:py-3"
-                    placeholder="tu.correo@ejemplo.com"
+                    placeholder="alejandro.rub.men@gmail.com"
                   />
                 </div>
 
