@@ -107,7 +107,7 @@ function PageContacto() {
                     id="email"
                     required
                     className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-lime-500 text-sm sm:px-4 sm:py-3"
-                    placeholder="alejandro.rub.men@gmail.com"
+                    placeholder="tu.correo@ejemplo.com"
                   />
                 </div>
 

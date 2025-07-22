@@ -58,7 +58,7 @@ function App() {
       <footer className="bg-black text-white p-6 text-center text-sm">
         <div className="container mx-auto">
           <p>
-            &copy; {new Date().getFullYear()} Estucont. Todos los derechos
+            &copy; {new Date().getFullYear()} Solvex Solution ©. Todos los derechos
             reservados 2025.
           </p>
         </div>

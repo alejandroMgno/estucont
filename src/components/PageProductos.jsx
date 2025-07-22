@@ -39,7 +39,7 @@ function PageProductos({ setCurrentPage }) {
       pageKey: "EF3",
     },
     {
-      name: "Boquilla",
+      name: "Junta Sin Arena / Boquilla",
       description:
         "Ideal para juntas en porcelanatos y cerámicos, ofrece acabado duradero y uniforme.",
       image: "/boquilla.webp",

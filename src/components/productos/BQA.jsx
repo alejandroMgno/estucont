@@ -6,7 +6,7 @@ function BOQUILLA
     <section className="bg-white text-gray-800 py-16 px-4 sm:py-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-[#41921c] text-center text-lime-600">
-          Boquilla
+         Junta Sin Arena / Boquilla
 
 
         </h2>
